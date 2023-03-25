@@ -6,7 +6,7 @@ import cors from "cors";
 import { URL } from 'url';
 import path from "path";
 
-const __dirname = new URL('.', import.meta.url).pathname.slice(1, -1);
+const __dirname = new URL('.', import.meta.url).pathname;
 // Verificaci�n de conexi�n con la base de datos.
 conexion.authenticate()
     .then(() => {
