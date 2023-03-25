@@ -8,7 +8,7 @@ function ListadoProductos() {
 
   const obtenerProductos = async () => {
     try {
-      const response = await axios.get('https://heavyfit.live/leerProductos');
+      const response = await axios.get('http://3.93.207.181:3001/leerProductos');
       setProductos(response.data);
     } catch (error) {
       console.log(error.message);
@@ -17,7 +17,7 @@ function ListadoProductos() {
 
   const actualizarStock = async (idProducto, cantidad) => {
     try {
-      const response = await axios.patch(`https://heavyfit.live/actualizarStockProducto/${idProducto}`, 
+      const response = await axios.patch(`http://3.93.207.181:3001/actualizarStockProducto/${idProducto}`, 
       { cantidad });
       if (response.status === 200) {
         console.log('Stock actualizado correctamente');
